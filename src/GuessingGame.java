@@ -16,11 +16,14 @@ public class GuessingGame {
         System.out.println("Enter a number from 1-100");
         userChoice = input.nextInt();
 
-        while(userChoice != winnerNumber) {
+        // This time we are working with a do while version of the code
+        do {
             System.out.println("Oops, that's incorrect 😨 ! Try again ");
             attempts ++;
             userChoice = input.nextInt();
-        }
+        } while (userChoice != winnerNumber);
+
+
         System.out.println("🎉Congrats, you've won the game 🎉");
         System.out.println("Total attempts: " + attempts);
 
